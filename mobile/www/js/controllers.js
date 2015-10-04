@@ -28,6 +28,15 @@ angular.module('starter.controllers', [])
     };
 })
 
+.controller('allCtrl', function($scope, $http) {
+    $http.get('http://localhost:3000/volunteers/all')
+    .success(function (data, status, headers) {
+        console.log(data);
+        $scope.volunteers = data.profiles;
+    })
+
+})
+
 .controller('ProgressCtrl', function($scope) {
     var percentage = document.getElementById('project-percentage');
     $scope.value = percentage.value;

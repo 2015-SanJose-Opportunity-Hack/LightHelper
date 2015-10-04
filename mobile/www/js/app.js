@@ -46,6 +46,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       controller: 'ProgressCtrl'
   })
 
+  .state('all', {
+      url:'/all',
+      templateUrl: 'templates/volunteers.html',
+      controller: 'allCtrl'
+  })
   // setup an abstract state for the tabs directive
   .state('tab', {
     url: '/tab',

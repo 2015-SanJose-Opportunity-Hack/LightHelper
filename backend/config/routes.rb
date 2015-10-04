@@ -3,6 +3,8 @@ Rails.application.routes.draw do
                                        registrations: 'volunteer/registrations',
                                        passwords: 'volunteer/passwords'}
 
+  get '/volunteers/all' => 'volunteer/profiles#all'
+
   get '/volunteers/:id' => 'volunteer/profiles#show'
 
   put '/volunteers/:id' => 'volunteer/profiles#update'
