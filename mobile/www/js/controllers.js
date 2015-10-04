@@ -29,7 +29,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('allCtrl', function($scope, $http) {
-    $http.get('http://localhost:3000/volunteers/all')
+    $http.get('http://lighthelper.herokuapp.com/volunteers/all')
     .success(function (data, status, headers) {
         console.log(data);
         $scope.volunteers = data.profiles;
