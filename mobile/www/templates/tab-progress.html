@@ -1,0 +1,68 @@
+<ion-view view-title="Progress" ng-controller="appCtrl">
+	<ion-nav-bar class="bar-givelight">
+	  <ion-nav-back-button>
+	  </ion-nav-back-button>
+
+	  <ion-nav-buttons side="left">
+	    <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()">
+	    </button>
+	  </ion-nav-buttons>
+	</ion-nav-bar>
+
+	<ion-side-menus>
+	  <!-- Left menu -->
+	  <ion-side-menu side="left">
+	  	<ion-list>
+	  		<a href="/#/tab/main/1">
+		  		<ion-item style="height:150px; background-color:#333;" class="item-avatar item-icon givelift-profile">
+		  		  <img style="left: 80px;" ng-src="https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png">
+		  		</ion-item>
+		  	</a>
+	  	</ion-list>
+	    <ion-list>
+	      <ion-item class="item-icon-left side-menu-list-item">
+	        <i style="color:#ccc;" class="icon ion-calendar"></i>SCHEDULE
+	      </ion-item>
+	    </ion-list>
+	    <ion-list>
+	      <ion-item class="item-icon-left side-menu-list-item">
+	        <i style="color:#ccc;" class="icon ion-load-d"></i>PROGRESS
+	      </ion-item>
+	    </ion-list>
+	    <ion-list>
+	      <ion-item class="item-icon-left side-menu-list-item">
+	        <i style="color:#ccc;" class="icon ion-ios-list-outline"></i>ANALYSIS
+	      </ion-item>
+	    </ion-list>
+	    <ion-list>
+	      <ion-item class="item-icon-left side-menu-list-item">
+	        <i style="color:#ccc;" class="icon ion-ios-gear-outline"></i>SETTING
+	      </ion-item>
+	    </ion-list>
+	    <ion-list>
+	      <ion-item class="item-icon-left side-menu-list-item">
+	        <i style="color:#ccc;" class="icon ion-flag"></i>ABOUT US
+	      </ion-item>
+	    </ion-list>
+
+	  </ion-side-menu>
+
+	  <ion-side-menu-content style="background-color:#888;">
+	  		<div style="margin-top:45px;"></div>
+	  			<div class="row">
+	  				<div class="project-title">Project A</div> 	  				
+	  			</div>
+
+	  			<div class="row" ng-click="showPercentange()">
+	  				<input id="project-percentage" type="range" style="width:80%; margin:5% 10%;">
+	  			</div>
+
+	  			<div>
+	  				<span class="percentage-value"> {{value}} % project has finished </span>
+	  				<button class="button button-dark" style="float:right; margin-right: 10%;">
+	  				  Update
+	  				</button>
+	  			</div>
+	  </ion-side-menu-content>
+	</ion-side-menus>
+</ion-view>

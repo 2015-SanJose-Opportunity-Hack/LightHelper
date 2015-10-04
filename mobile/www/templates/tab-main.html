@@ -1,0 +1,130 @@
+<ion-view view-title="Light Helper" ng-controller="appCtrl">
+	<ion-nav-bar class="bar-givelight">
+	  <ion-nav-back-button>
+	  </ion-nav-back-button>
+
+	  <ion-nav-buttons side="left">
+	    <button class="button button-icon button-clear ion-navicon" ng-click="toggleLeft()">
+	    </button>
+	  </ion-nav-buttons>
+	</ion-nav-bar>
+
+	<ion-side-menus>
+	  <!-- Left menu -->
+	  <ion-side-menu side="left">
+	  	<ion-list>
+	  		<ion-item style="height:150px; background-color:#333;" class="item-avatar item-icon givelift-profile">
+	  		  <img style="left: 80px;" ng-src="https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png">
+	  		</ion-item>
+	  	</ion-list>
+	    <ion-list>
+	      <ion-item class="item-icon-left side-menu-list-item">
+	        <i style="color:#ccc;" class="icon ion-calendar"></i>SCHEDULE
+	      </ion-item>
+	    </ion-list>
+	    <ion-list>
+	      <ion-item class="item-icon-left side-menu-list-item" ng-click="progress()">
+	        <i style="color:#ccc;" class="icon ion-load-d"></i>PROGRESS
+	      </ion-item>
+	    </ion-list>
+	    <ion-list>
+	      <ion-item class="item-icon-left side-menu-list-item">
+	        <i style="color:#ccc;" class="icon ion-ios-list-outline"></i>ANALYSIS
+	      </ion-item>
+	    </ion-list>
+	    <ion-list>
+	      <ion-item class="item-icon-left side-menu-list-item">
+	        <i style="color:#ccc;" class="icon ion-ios-gear-outline"></i>SETTING
+	      </ion-item>
+	    </ion-list>
+	    <ion-list>
+	      <ion-item class="item-icon-left side-menu-list-item">
+	        <i style="color:#ccc;" class="icon ion-flag"></i>ABOUT US
+	      </ion-item>
+	    </ion-list>
+
+	  </ion-side-menu>
+
+	  <ion-side-menu-content style="overflow:scroll;">
+	    <div style="height:45px;"></div>
+	    <ion-list>
+	      <ion-item style="padding:0" id="homepage-img-1">
+	         <div class="homepage-bg-img" ng-click="listVolunteers(1)">
+	         	<img src="http://i.imgur.com/qlfKbk9.jpg">
+	         	<div class="homepage-text">GLOBAL BISTRO</div>
+	         	<div class="homepage-subtext">4 volunteers</div>
+	         </div>
+	         <ol class="rectangle-list">
+	           <li class="row volunteers_list" ng-show="volunteerData && properIndex == 1" ng-repeat="volunteer in volunteers">
+	           		<a href="#">
+		           		<span style="width:50%; float:left;">{{volunteer.first_name}} {{volunteer.last_name}}</span>
+		           		<span style="width:50%; text-align:right; float:right;"> {{volunteer.weekly_hrs}} working hours this week.</span>
+		           	</a>
+	           </li>
+	         </ol>
+	      </ion-item>
+	      <ion-item style="padding:0">
+	         <div class="homepage-bg-img" ng-click="listVolunteers(2)">
+	         	<img src="http://i.imgur.com/im1HMu4.jpg">
+	         	<div class="homepage-text">WORKATHON</div>
+	         	<div class="homepage-subtext">4 volunteers</div>
+	         </div>
+              <ol class="rectangle-list">
+                <li class="row volunteers_list" ng-show="volunteerData && properIndex == 2" ng-repeat="volunteer in volunteers">
+                		<a href="#">
+     	           		<span style="width:50%; float:left;">{{volunteer.first_name}} {{volunteer.last_name}}</span>
+     	           		<span style="width:50%; text-align:right; float:right;"> {{volunteer.weekly_hrs}} working hours this week.</span>
+     	           	</a>
+                </li>
+              </ol>	         
+	      </ion-item>
+	      <ion-item style="padding:0">
+	         <div class="homepage-bg-img" ng-click="listVolunteers(3)">
+	         	<img src="http://i.imgur.com/Rb0Vtfa.jpg">
+	         	<div class="homepage-text">WEB DESIGN / MANAGEMENT</div>
+	         	<div class="homepage-subtext">2 volunteers</div>
+	         </div>
+              <ol class="rectangle-list">
+                <li class="row volunteers_list" ng-show="volunteerData && properIndex == 3" ng-repeat="volunteer in volunteers">
+                		<a href="#">
+     	           		<span style="width:50%; float:left;">{{volunteer.first_name}} {{volunteer.last_name}}</span>
+     	           		<span style="width:50%; text-align:right; float:right;"> {{volunteer.weekly_hrs}} working hours this week.</span>
+     	           	</a>
+                </li>
+              </ol>	
+	      </ion-item>
+	      <ion-item style="padding:0">
+	         <div class="homepage-bg-img" ng-click="listVolunteers(4)">
+	         	<img src="http://i.imgur.com/j4HpoQ2.jpg">
+	         	<div class="homepage-text">DESIGN</div>
+	         	<div class="homepage-subtext">0 volunteers</div>
+	         </div>
+              <ol class="rectangle-list">
+                <li class="row volunteers_list" ng-show="volunteerData && properIndex == 4" ng-repeat="volunteer in volunteers">
+                		<a href="#">
+     	           		<span style="width:50%; float:left;">{{volunteer.first_name}} {{volunteer.last_name}}</span>
+     	           		<span style="width:50%; text-align:right; float:right;"> {{volunteer.weekly_hrs}} working hours this week.</span>
+     	           	</a>
+                </li>
+              </ol>	
+	      </ion-item>
+	      <ion-item style="padding:0">
+	         <div class="homepage-bg-img" ng-click="listVolunteers(5)">
+	         	<img src="http://i.imgur.com/WLVFTxo.jpg">
+	         	<div class="homepage-text">COUNTRY LEADS</div>
+	         	<div class="homepage-subtext">0 volunteers</div>
+	         </div>
+             <ol class="rectangle-list">
+               <li class="row volunteers_list" ng-show="volunteerData && properIndex == 2" ng-repeat="volunteer in volunteers">
+               		<a href="#">
+    	           		<span style="width:50%; float:left;">{{volunteer.first_name}} {{volunteer.last_name}}</span>
+    	           		<span style="width:50%; text-align:right; float:right;"> {{volunteer.weekly_hrs}} working hours this week.</span>
+    	           	</a>
+               </li>
+             </ol>	
+	      </ion-item>
+	    </ion-list>
+	  </ion-side-menu-content>
+	  
+	</ion-side-menus>
+</ion-view>
